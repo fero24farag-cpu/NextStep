@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #3b82f6;
+}
+
+.hero-text {
+    color: #cbd5e1;
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 15px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: white;
+}
+
+.secondary-button {
+    border: 1px solid #475569;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}/* Services */
+
+.services {
+    padding: 100px 7%;
+    background: #111827;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+}
+
+.services-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #2563eb;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+
+/* Packages */
+
+.packages {
+    padding: 100px 7%;
+    background: #0f172a;
+}
+
+.packages-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.package-card {
+    position: relative;
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 18px;
+    padding: 35px 30px;
+    text-align: center;
+}
+
+.package-card.featured {
+    border: 2px solid #2563eb;
+    transform: translateY(-10px);
+}
+
+.package-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.price span {
+    font-size: 15px;
+    color: #94a3b8;
+}
+
+.package-card > p {
+    color: #94a3b8;
+    line-height: 1.7;
+    min-height: 55px;
+}
+
+.package-card ul {
+    list-style: none;
+    margin: 30px 0;
+    text-align: right;
+}
+
+.package-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #1e293b;
+    color: #cbd5e1;
+}
+
+.package-card a {
+    display: block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.package-card a:hover {
+    background: #1d4ed8;
+}
+
+.popular {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .package-card.featured {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+/* Portfolio */
+
+.portfolio {
+    padding: 100px 7%;
+    background: #111827;
+}
+
+.portfolio-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.portfolio-image {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+.restaurant {
+    background: #7f1d1d;
+}
+
+.gym {
+    background: #172554;
+}
+
+.barber {
+    background: #422006;
+}
+
+.portfolio-info {
+    padding: 25px;
+}
+
+.portfolio-info span {
+    color: #60a5fa;
+    font-size: 14px;
+}
+
+.portfolio-info h3 {
+    margin: 8px 0;
+    font-size: 22px;
+}
+
+.portfolio-info p {
+    color: #94a3b8;
+}
+
+
+/* Contact */
+
+.contact {
+    padding: 120px 20px;
+    text-align: center;
+    background: #0f172a;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.contact h2 span {
+    color: #3b82f6;
+}
+
+.contact p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 30px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.whatsapp-button:hover {
+    background: #15803d;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 40px 7%;
+    text-align: center;
+    background: #020617;
+    border-top: 1px solid #1e293b;
+}
+
+footer p {
+    color: #64748b;
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* Portfolio & Contact Mobile */
+
+@media (max-width: 800px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+}
+
+/* Extra Mobile Improvements */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-button {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 110px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .services,
+    .packages,
+    .portfolio {
+        padding: 70px 5%;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+
+    .package-card {
+        padding: 30px 20px;
+    }
+
+    .price {
+        font-size: 34px;
+    }
+
+    .portfolio-image {
+        height: 180px;
+    }
+
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .contact h2 {
+        font-size: 34px;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+        font-size: 16px;
+    }
+} 
